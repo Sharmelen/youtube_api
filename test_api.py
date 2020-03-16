@@ -45,5 +45,5 @@ list = str(view_count).split()
 related_link = [i for i in list if i.startswith('href')]
 
 for x in range (len(related_link)):
-
+    #FIND ALL RELATED LINKS TO THE VIDEO
     print('https://www.youtube.com{}'.format(related_link[x].strip('href=""')))
