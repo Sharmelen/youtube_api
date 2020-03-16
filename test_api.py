@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
-api_key = 'AIzaSyASfy22lmaxSt2-MbAk9nMZql3wTtLFSZ0'
+api_key = 'YOUR_API_KEY'
 yt = YouTubeDataAPI(api_key)
 
 searches = yt.search(q='ryan', max_results=2)
