@@ -7,7 +7,7 @@ import re
 api_key = 'YOUR_API_KEY'
 yt = YouTubeDataAPI(api_key)
 
-searches = yt.search(q='ryan', max_results=2)
+searches = yt.search(q='enter_your_link', max_results=2)
 
 data = searches[1]
 print("video_id: ",data['video_id'])
