@@ -4,10 +4,12 @@ from bs4 import BeautifulSoup
 import requests
 import re
 
-api_key = 'YOUR_API_KEY'
+api_key = 'AIzaSyASfy22lmaxSt2-MbAk9nMZql3wTtLFSZ0'
 yt = YouTubeDataAPI(api_key)
 
-searches = yt.search(q='enter_your_link', max_results=2)
+keyword_description = ['pretend','nursery','play','mommy','games','ryan','toys','nursery','action','cartoon','animation','rhyme','Bottle Flip']
+
+searches = yt.search(q='ryan', max_results=2)
 
 data = searches[1]
 print("video_id: ",data['video_id'])
@@ -20,6 +22,19 @@ print("Video Description : ",data['video_description'])
 print("Video Category : ",data['video_category'])
 print("Video Thumbnail : ",data['video_thumbnail'])
 print("Date Collected : ",data['collection_date'])
+
+vid_descriprion = data['video_description']
+
+cumulative = []
+for x in range (len(keyword_description)):
+    if keyword_description[x] in vid_descriprion :
+        #print("yes")
+
+        cumulative.append(keyword_description[x])
+
+if len(cumulative) > 2:
+    print("Video Tag : Baby Video" )
+
 
 url = 'https://www.youtube.com/watch?v={}'.format(video_id)
 
@@ -45,5 +60,5 @@ list = str(view_count).split()
 related_link = [i for i in list if i.startswith('href')]
 
 for x in range (len(related_link)):
-    #FIND ALL RELATED LINKS TO THE VIDEO
+
     print('https://www.youtube.com{}'.format(related_link[x].strip('href=""')))
