@@ -10,10 +10,9 @@ import re
 #video_rating, video_length, video_likes, video_dislikes, view_count
 
 url = 'https://www.youtube.com/watch?v=hp1TOvFKlgE&t=824s'
-#AIzaSyASfy22lmaxSt2-MbAk9nMZql3wTtLFSZ0
-#AIzaSyAEvNFEm7GFThoESLqU1ZQkikUR484beEI
+
 def youtube_data_collector(url):
-    api_key = 'AIzaSyAEvNFEm7GFThoESLqU1ZQkikUR484beEI'
+    api_key = ' '
     yt = YouTubeDataAPI(api_key)
 
     searches = yt.search(q=url, max_results=2)
