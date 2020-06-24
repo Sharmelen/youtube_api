@@ -5,10 +5,10 @@ import re
 import pymysql
 import pafy
 
-connection = pymysql.connect(host='37.59.55.185', user='4Kdgz5M8bA', port=3306, password='s09exGmH7V',
-                                 db='4Kdgz5M8bA',
+connection = pymysql.connect(host='37.59.55.185', user='', port=3306, password='',
+                                 db='',
                                  cursorclass=pymysql.cursors.DictCursor)
-api_key = "AIzaSyBPZ68tFCo391ofWwOb-laiGuZM0SX7v9g"
+api_key = ""
 
 def retrive_db():
 
