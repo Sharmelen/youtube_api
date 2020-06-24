@@ -7,8 +7,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 
-connection = pymysql.connect(host='37.59.55.185', user='4Kdgz5M8bA', port=3306, password='s09exGmH7V',
-                                 db='4Kdgz5M8bA',
+connection = pymysql.connect(host='37.59.55.185', user='', port=3306, password='',
+                                 db='',
                                  cursorclass=pymysql.cursors.DictCursor)
 
 def language_category():
